@@ -1,1 +1,22 @@
+# ===============================
+# = DATA SOURCE
+# ===============================
+# Set here configurations for the database connection
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/gestiondestock?createDatabaseIfNotExist=false
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+##Specify DBM
+  jpa:
+    show-sql: true
+    #DDL Auto (Create, create-drop, update) or none
+    hibernate:
+      properties:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      ddl-auto:  none
+    database: MYSQL
 
+server:
+  port: 8881
